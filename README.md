@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+## Binar Challenge | FSW5 | Team O.N.E.
+Code Challenge 11 dari Binar Academy untuk kelas Fullstack Web Wave 5 Team O.N.E.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo
+Link for demo: [https://fsw5-tim1-staging.herokuapp.com/](https://fsw5-tim1-staging.herokuapp.com/)
 
-## Available Scripts
+### Description
+Resume Builder sederhana.
 
-In the project directory, you can run:
+### Instalation
 
-### `yarn start`
+**1. Clone the source code**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ git clone https://gitlab.com/ridhanf/challenge-11-team-one.git
+$ cd challenge-11-team-one
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**2. Install Dependencies**
 
-### `yarn test`
+Make sure you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/) installed. Project dependencies listed in `package.json`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ npm install
+```
 
-### `yarn build`
+**3. Run React**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run React with:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Server listening in port 3000 (open http://localhost:3000)
 
-### `yarn eject`
+&nbsp;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Gitflow Workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Berikut adalah panduan umum untuk developer yang akan mengembangkan satu fitur
+1. Buat branch baru dan beri nama sesuai kode/fitur yang akan ditambah dengan perintah berikut:\
+``$ git checkout -b feature-[nama_feature]`` misal: ``$ git checkout -b feature-login``
+2. Lakukan coding seperti biasa. Tambahkan, hapus, atau ubah file yang diperlukan. Git akan tracking secara otomatis. Apabila ingin melihat file yang berubah, cek dengan\
+``$ git status``
+3. Untuk menambahkan perubahan, lakukan\
+``$ git add .`` atau ``$ git add --all``, kemudian\
+``$ git commit -m “pesan apa pun”`` misal  ``$ git commit -m “add login feature”``
+4. Sebelum melakukan push, pastikan sudah update dengan versi development terbaru:\
+``$ git pull origin development``
+5. Jika terjadi conflict karena ada anggota tim lain yang mengedit baris code sama, lakukan resolve di code editor dengan memilih potongan code yang betul. Ada beberapa opsi:
+> - pilih code existing (milik kita),
+> - pilih code incoming (milik anggota lain), atau
+> - keep both (dua-duanya dimasukkan).
+>
+> Pastikan rangkaian code masih berjalan ketika resolve conflict ini.
+6. Lakukan push ke branch feature dengan\
+``$ git push feature-login``
+7. Lakukan merge request di Gitlab, pilih branch asal ``feature-login`` dan branch tujuan ``development``. Pastikan tidak ada conflict, lalu klik create merge request
+8. Maintainer review merge request dan approve apabila tidak ada conflict
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Referensi Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
