@@ -1,0 +1,101 @@
+.resume {
+  display: flex;
+}
+
+/* SECCTION 1 */
+
+.headerSection1 {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.personalDetails {
+  border: none;
+}
+.personalDetails h3 > input {
+  border: none;
+}
+
+.headerProfile {
+  display: flex;
+}
+/* .headerProfile > h2 > input {
+  border: none;
+  color: black;
+  display: flex;
+} */
+
+.proSummary > h3 > input {
+  border: none;
+  color: black;
+  outline: none;
+  margin-top: 50px;
+}
+
+.socialLinks > h3 > input {
+  border: none;
+  color: black;
+  outline: none;
+  margin-top: 50px;
+}
+
+.section1 {
+  height: 400vh;
+  width: 100%;
+  background-color: white;
+  margin: 100px;
+}
+
+.skills {
+  display: grid;
+  margin-top: 50px;
+}
+
+.skills_tittle {
+  display: flex;
+}
+.header_skill > h3 > input {
+  display: flex;
+  border: none;
+  outline: none;
+}
+
+.skills_left {
+  margin-right: 50px;
+  display: flex;
+}
+
+.header_educations > h3 > input {
+  border: none;
+  outline: none;
+  margin-top: 50px;
+}
+
+.form_educations {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* display: flex; */
+}
+
+.startLabel {
+  margin-left: 15px;
+}
+
+.toLabel {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.calendarApp {
+  margin: 20px;
+}
+
+/* SECCTION 2 */
+
+.section2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #7a8599;
+}
