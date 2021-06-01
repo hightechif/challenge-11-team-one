@@ -266,15 +266,15 @@ function Builder() {
             </div>
           </div>
 
-          <div className="educations">
-            <div className="header_educations">
+          <div className="experience">
+            <div className="header_experience">
               <h3>
                 <input type="text" placeholder="Experience" />{" "}
                 <i className="far fa-edit"></i>
               </h3>
             </div>
-            <div className="form_educations">
-              <div className="header_form_education">
+            <div className="form_experience">
+              <div className="header_form_experience">
                 <h3 className="ml-3">header</h3>
                 <hr />
               </div>
@@ -298,24 +298,17 @@ function Builder() {
                   </Form.Group>
                 </Form.Row>
 
-                <div>
-                  <label className="startLabel">Start :</label>
-                  <DatePicker
-                    className="form-control m-3"
-                    selected={checkInDate}
-                    minDate={new Date()}
-                    onChange={handleCheckInDate}
-                  />
-                </div>
-                <div>
-                  <label className="toLabel">To :</label>
-                  <DatePicker
-                    className="form-control ml-3"
-                    selected={checkOutDate}
-                    minDate={checkInDate}
-                    onChange={handleCheckOutDate}
-                  />
-                </div>
+                <Form.Row>
+                  <Form.Group className="m-2" as={Col} controlId="first-name">
+                    <Form.Label> Start</Form.Label>
+                    <Form.Control type="input" placeholder="DD-MM-YYYY" />
+                  </Form.Group>
+
+                  <Form.Group className="m-2" as={Col} controlId="end-name">
+                    <Form.Label>To</Form.Label>
+                    <Form.Control type="input" placeholder="DD-MM-YYYY" />
+                  </Form.Group>
+                </Form.Row>
                 <Button
                   className="sm ml-3 mb-3"
                   variant="primary"

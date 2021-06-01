@@ -88,6 +88,20 @@
   margin-right: 15px;
   margin-bottom: 20px;
 }
+
+.header_experience > h3 > input {
+  border: none;
+  outline: none;
+  margin-top: 50px;
+}
+
+.form_experience {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  /* display: flex; */
+}
+
 .calendarApp {
   margin: 20px;
 }
