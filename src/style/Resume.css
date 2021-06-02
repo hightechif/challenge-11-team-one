@@ -113,3 +113,109 @@
   width: 100%;
   background-color: #7a8599;
 }
+
+.headerSection2 {
+  justify-content: space-evenly;
+  color: white;
+  margin-left: 20px;
+  margin-top: -15px;
+  display: flex;
+  position: relative;
+}
+
+.pagination {
+  align-items: center;
+  display: inline-block;
+  /* margin-left: 50px; */
+}
+.pagination > button {
+  border: none;
+  outline: none;
+  overflow: none;
+  background: none;
+  color: white;
+}
+.text_pages {
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.check_tasks {
+  margin-top: 23px;
+}
+
+.button-close {
+  margin-top: 30px;
+  margin-left: 180px;
+  background-color: lightseagreen;
+  opacity: 0.9;
+  background-size: 50px;
+  border-radius: 9999px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.button-close > button {
+  background: none;
+  border-radius: 90px;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+}
+
+.button-close > button :hover {
+  background-size: 40px;
+  color: white;
+  border-radius: 40px;
+  opacity: 0.7;
+}
+
+.mainSection2 {
+  width: 80%;
+  height: 80vh;
+  background-color: white;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 60px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.mainLeft {
+  width: 30%;
+  height: 80vh;
+  background-color: teal;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  color: white;
+}
+
+.mainRight {
+  width: 70%;
+  height: 80vh;
+  background-color: whitesmoke;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  color: black;
+}
+
+.buttom-section2 {
+  justify-content: space-evenly;
+  display: flex;
+  margin-top: 10px;
+}
+
+.buttom-left > button {
+  border: none;
+  background: none;
+}
+
+.buttom-right > button {
+  border: none;
+  background: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
