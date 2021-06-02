@@ -40,12 +40,12 @@
   margin-top: 50px;
 }
 
-.section1 {
+/* .section1 {
   height: 400vh;
   width: 100%;
   background-color: white;
   margin: 100px;
-}
+} */
 
 .skills {
   display: grid;
@@ -108,11 +108,11 @@
 
 /* SECCTION 2 */
 
-.section2 {
+/* .section2 {
   height: 100vh;
   width: 100%;
   background-color: #7a8599;
-}
+} */
 
 .headerSection2 {
   justify-content: space-evenly;

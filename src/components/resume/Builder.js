@@ -1,6 +1,5 @@
 import { Form, Col, Button, FormControl } from "react-bootstrap";
 import "../../style/Resume.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "react-datepicker/dist/react-datepicker.css";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";

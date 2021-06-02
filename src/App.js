@@ -1,12 +1,8 @@
+import Router from "./router";
 import "./App.css";
-import Resume from "./pages/Resume";
 
 function App() {
-  return (
-    <div className="App">
-      <Resume />
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;

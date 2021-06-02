@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../style/Resume.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 
 export default class Preview extends Component {
