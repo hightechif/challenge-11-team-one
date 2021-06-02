@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "../../style/Resume.css";
 import { Button } from "react-bootstrap";
+import { connect } from "react-redux";
 
-export default class Preview extends Component {
+class Preview extends Component {
   render() {
     return (
       <div className="section2 sticky-top">
@@ -32,7 +33,11 @@ export default class Preview extends Component {
 
         <div className="mainSection2">
           <div className="mainLeft"></div>
-          <div className="mainRight"></div>
+          <div className="mainRight">
+            <p>First Name: {this.props.data.firstName}</p>
+            <p>Last Name: {this.props.data.lastName}</p>
+            <p>Email: {this.props.data.email} </p>
+          </div>
         </div>
 
         <div className="buttom-section2">
@@ -51,3 +56,11 @@ export default class Preview extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    data: state.data,
+  };
+};
+
+export default connect(mapStateToProps)(Preview);
