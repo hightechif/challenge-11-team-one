@@ -24,6 +24,9 @@ export default class NavbarComponent extends Component {
           </Nav>
           <Nav className={`${classes.navLink} ml-auto`}>
             <Nav.Link>
+              <Link to="/register">Register</Link>
+            </Nav.Link>
+            <Nav.Link>
               <Link to="/login">Login</Link>
             </Nav.Link>
           </Nav>
