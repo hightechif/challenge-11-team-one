@@ -1,16 +1,16 @@
 const initState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  address: "",
-  address2: "",
-  city: "",
-  state: "",
-  zipCode: "",
-  profSummary: "",
-  webLinks: "",
-  skills: "",
+  firstName: "firstName",
+  lastName: "lastName",
+  email: "example@mail.com",
+  phone: "123 456 789",
+  address: "Jakarta",
+  address2: "jakarta",
+  city: "Jakarta Pusat",
+  state: "DKI Jakarta",
+  zipCode: "40222",
+  profSummary: "A fullstack developer with 5 years experience",
+  webLinks: "github.com/account",
+  skills: ["javaScript"],
 };
 
 const dataReducer = (state = initState, action) => {
