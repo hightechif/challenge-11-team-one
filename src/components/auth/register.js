@@ -1,38 +1,65 @@
 import React, { Component } from 'react'
 import { faFacebook, faTwitter, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Redirect } from 'react-router'
+import { register } from '../../redux/actions/auth.actions'
+import { connect } from 'react-redux'
 
 
-export default class Register extends Component {
+class Register extends Component {
+    state = {
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        // dispatch register, ex:
+        // this.props.register(this.state);
+    }
+
     render() {
+        const { auth, authError } = this.props;
+
+        // if user is logged in, redirect to home
+        if(auth.uid) return <Redirect to="/" />
+
         return (
             <div className="py-5">
                 <div id="login-row" className="row justify-content-center no-gutters">
                     <div id="login-column" className="col-md-4">  
                         <div id="login-box" className="col-md-12">
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <h1 className="mb-3">Sign Up</h1>
                                 <div class="row mb-4">
                                     <div class="col">
                                     <div class="form-outline">
-                                        <label class="form-label" for="form3Example1">First name</label>
-                                        <input type="text" id="form3Example1" class="form-control" />
+                                        <label class="form-label" for="firstName">First name</label>
+                                        <input type="text" id="firstName" class="form-control" onChange={this.handleChange} />
                                     </div>
                                     </div>
                                     <div class="col">
                                     <div class="form-outline">
-                                        <label class="form-label" for="form3Example2">Last name</label>
-                                        <input type="text" id="form3Example2" class="form-control" />
+                                        <label class="form-label" for="lastName">Last name</label>
+                                        <input type="text" id="lastName" class="form-control" onChange={this.handleChange} />
                                     </div>
                                     </div>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Email address</label>
-                                    <input type="email" id="form2Example1" class="form-control" />
+                                    <label class="form-label" for="email">Email address</label>
+                                    <input type="email" id="email" class="form-control" onChange={this.handleChange} />
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example2">Password</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="password">Password</label>
+                                    <input type="password" id="password" class="form-control" onChange={this.handleChange} />
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
@@ -63,3 +90,18 @@ export default class Register extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        auth: 'hello',
+        authError: state.auth.authError
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        register: (newUser) => dispatch(register(newUser))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register)
