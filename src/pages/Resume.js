@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import NavbarComponent from "../components/NavbarComponent";
+// import NavbarComponent from "../components/NavbarComponent";
 import Builder from "../components/resume/Builder";
 import Preview from "../components/resume/Preview";
 import "../style/Resume.css";
@@ -11,10 +11,10 @@ export default class Resume extends Component {
       <div className="resume">
         <Container fluid>
           <Row>
-            <Col sm={3}>
+            <Col md={3}>
               <Builder />
             </Col>
-            <Col sm={9}>
+            <Col md={9}>
               <Preview />
             </Col>
           </Row>
