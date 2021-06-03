@@ -21,6 +21,9 @@ export default class NavbarComponent extends Component {
             <Nav.Link>
               <Link to="/resume">Resume</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/resume2">Resume2</Link>
+            </Nav.Link>
           </Nav>
           <Nav className={`${classes.navLink} ml-auto`}>
             <Nav.Link>
