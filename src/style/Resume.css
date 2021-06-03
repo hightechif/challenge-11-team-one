@@ -108,25 +108,26 @@
 
 /* SECCTION 2 */
 
-/* .section2 {
-  height: 100vh;
-  width: 100%;
+.section2 {
+  /* height: 100vh;
+  width: 100%; */
   background-color: #7a8599;
-} */
+  font-family: "Times New Roman", Times, serif;
+}
 
 .headerSection2 {
   justify-content: space-evenly;
   color: white;
   margin-left: 20px;
-  margin-top: -15px;
+  /* margin-top: -15px; */
   display: flex;
   position: relative;
 }
 
 .pagination {
   align-items: center;
-  display: inline-block;
-  /* margin-left: 50px; */
+  display: flex;
+  margin-left: 50px;
 }
 .pagination > button {
   border: none;
@@ -137,7 +138,7 @@
 }
 .text_pages {
   padding: 10px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 .check_tasks {
@@ -145,18 +146,18 @@
 }
 
 .button-close {
-  margin-top: 30px;
-  margin-left: 180px;
-  background-color: lightseagreen;
+  /* margin-top: 30px;
+  margin-left: 180px; */
+
   opacity: 0.9;
-  background-size: 50px;
+  /* background-size: 50px; */
   border-radius: 9999px;
-  padding: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
+  /* padding: 5px; */
+  /* padding-left: 8px;
+  padding-right: 8px; */
 }
 
-.button-close > button {
+.button-close > a {
   background: none;
   border-radius: 90px;
   border: none;
@@ -185,16 +186,59 @@
 }
 
 .mainLeft {
-  width: 30%;
+  width: 40%;
   height: 80vh;
-  background-color: teal;
+  background-color: #084c41;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   color: white;
 }
 
+/* PERSONAL details */
+
+.personal-details > h5 {
+  font-family: "Times New Roman";
+  font-weight: 600;
+  line-height: 13px;
+}
+.details {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.details > p {
+  margin-top: 10px;
+  font-size: 8px;
+  line-height: 0px;
+  font-weight: 800;
+}
+.email-cv {
+  margin-top: -50;
+}
+.phone-cv {
+  margin-top: -50;
+}
+
+.addLinks {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.addLinks > p {
+  margin-top: 10px;
+  font-size: 8px;
+  line-height: 0px;
+  font-weight: 800;
+}
+
+/* 
+BAGIAN KANAN PREVIEW */
+
 .mainRight {
-  width: 70%;
+  font-family: "Times New Roman", Times, serif;
+  width: 60%;
   height: 80vh;
   background-color: whitesmoke;
   border-bottom-right-radius: 5px;
@@ -202,6 +246,38 @@
   color: black;
 }
 
+.profSumm > p {
+  margin-top: 10px;
+  font-size: 8px;
+  line-height: 0px;
+  font-weight: 800;
+}
+
+.summary > h5 {
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.experience > p {
+  margin-top: 10px;
+  font-size: 8px;
+  line-height: 0px;
+  font-weight: 800;
+}
+
+.educations > p {
+  margin-top: 10px;
+  font-size: 8px;
+  line-height: 0px;
+  font-weight: 800;
+}
+
+.description-summary {
+  color: #7a8599;
+  line-height: 1px;
+  font-size: 10px;
+  font-weight: 700;
+}
 .buttom-section2 {
   justify-content: space-evenly;
   display: flex;

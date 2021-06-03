@@ -2,6 +2,15 @@ const initState = {
   firstName: "",
   lastName: "",
   email: "",
+  phone: "",
+  address: "",
+  address2: "",
+  city: "",
+  state: "",
+  zipCode: "",
+  profSummary: "",
+  webLinks: "",
+  skills: "",
 };
 
 const dataReducer = (state = initState, action) => {
@@ -12,6 +21,26 @@ const dataReducer = (state = initState, action) => {
         firstName: action.payload.firstName,
         lastName: action.payload.lastName,
         email: action.payload.email,
+        phone: action.payload.phone,
+        address: action.payload.address,
+        address2: action.payload.address2,
+        city: action.payload.city,
+        state: action.payload.state,
+        zipCode: action.payload.zipCode,
+        profSummary: action.payload.profSummary,
+        webLinks: action.payload.webLinks,
+        webLinks2: action.payload.webLinks2,
+        skills: action.payload.skills,
+        educationSchool: action.payload.educationSchool,
+        educationDegree: action.payload.educationDegree,
+        educationDesciption: action.payload.educationDescription,
+        educationStart: action.payload.educationStart,
+        educationTo: action.payload.educationTo,
+        experienceCompany: action.payload.experienceCompany,
+        experiencePosition: action.payload.experiencePosition,
+        experienceDescription: action.payload.experienceDescription,
+        experienceStart: action.payload.experienceStart,
+        experienceTo: action.payload.experienceTo,
       };
       return newData;
     default:

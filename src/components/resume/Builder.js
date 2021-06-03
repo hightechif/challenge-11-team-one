@@ -11,6 +11,25 @@ class Builder extends Component {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
+    address: "",
+    address2: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    profSummary: "",
+    webLinks: "",
+    educationSchool: "",
+    educationDegree: "",
+    educationDesciption: "",
+    educationStart: "",
+    educationTo: "",
+    experienceCompany: "",
+    experiencePosition: "",
+    experienceDescription: "",
+    experienceStart: "",
+    experienceTo: "",
+
     checkInDate: "",
     checkOutDate: "",
   };
@@ -44,7 +63,7 @@ class Builder extends Component {
 
   render() {
     return (
-      <div className="resume">
+      <div className="resume  ml-3 mt-4">
         <div className="section1 ">
           <div className="headerSection1">
             <h3>Tittle</h3>
@@ -94,40 +113,63 @@ class Builder extends Component {
                 />
               </Form.Group>
 
-              <Form.Group as={Col} controlId="end-name">
+              <Form.Group as={Col}>
                 <Form.Label>Phone</Form.Label>
-                <Form.Control type="input" placeholder="Enter Phone Number" />
+                <Form.Control
+                  type="input"
+                  placeholder="Enter Phone Number"
+                  id="phone"
+                  onChange={this.handleChange}
+                />
               </Form.Group>
             </Form.Row>
 
-            <Form.Group controlId="formGridAddress1">
+            <Form.Group>
               <Form.Label>Address</Form.Label>
-              <Form.Control placeholder="1234 Main St" />
+              <Form.Control
+                type="input"
+                placeholder="1234 Main St"
+                id="address"
+                onChange={this.handleChange}
+              />
             </Form.Group>
 
-            <Form.Group controlId="formGridAddress2">
+            <Form.Group>
               <Form.Label>Address 2</Form.Label>
-              <Form.Control placeholder="Apartment, studio, or floor" />
+              <Form.Control
+                placeholder="Apartment, studio, or floor"
+                id="address2"
+                onChange={this.handleChange}
+              />
             </Form.Group>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridCity">
+              <Form.Group as={Col}>
                 <Form.Label>City</Form.Label>
-                <Form.Control />
+                <Form.Control
+                  placeholder="Insert City"
+                  id="city"
+                  onChange={this.handleChange}
+                />
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formGridState">
+              <Form.Group as={Col}>
                 <Form.Label>State</Form.Label>
-                <Form.Control as="select" defaultValue="Choose...">
+                <Form.Control
+                  as="select"
+                  defaultValue="Choose..."
+                  id="state"
+                  onChange={this.handleChange}
+                >
                   <option>Choose...</option>
                   <option>Indonesia</option>
                   <option>Malaysia</option>
                 </Form.Control>
               </Form.Group>
 
-              <Form.Group as={Col} controlId="formGridZip">
+              <Form.Group as={Col}>
                 <Form.Label>Zip Code</Form.Label>
-                <Form.Control />
+                <Form.Control id="zipCode" onChange={this.handleChange} />
               </Form.Group>
             </Form.Row>
 
@@ -144,6 +186,8 @@ class Builder extends Component {
             <Form.Row>
               <Form.Group as={Col}>
                 <FormControl
+                  id="profSummary"
+                  onChange={this.handleChange}
                   as="textarea"
                   aria-label="With textarea"
                   placeholder="Hardworking College Student seeking employment.• Bringing forth a motivated attitude and a variety of powerful skills.•"
@@ -162,14 +206,18 @@ class Builder extends Component {
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col} controlId="formGridCity">
+              <Form.Group as={Col}>
                 <Form.Label>Link 1</Form.Label>
-                <Form.Control />
+                <Form.Control
+                  type="input"
+                  id="webLinks"
+                  onChange={this.handleChange}
+                />
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridZip">
                 <Form.Label>Link 2</Form.Label>
-                <Form.Control />
+                <Form.Control id="webLinks2" onChange={this.handleChange} />
               </Form.Group>
             </Form.Row>
 
@@ -248,50 +296,64 @@ class Builder extends Component {
               </div>
               <div className="form_educations">
                 <div className="header_form_education">
-                  <h3 className="ml-3">header</h3>
-                  <hr />
+                  <h3 className="ml-3"></h3>
                 </div>
                 <Form>
                   <Form.Row>
-                    <Form.Group className="m-2" as={Col} controlId="first-name">
+                    <Form.Group className="m-2" as={Col}>
                       <Form.Label> School or University</Form.Label>
                       <Form.Control
                         type="input"
                         placeholder="Enter School/University"
+                        id=" educationSchool"
+                        onChange={this.handleChange}
                       />
                     </Form.Group>
 
                     <Form.Group className="m-2" as={Col} controlId="end-name">
                       <Form.Label>Degree</Form.Label>
-                      <Form.Control type="input" placeholder="Enter Degree" />
+                      <Form.Control
+                        id=" educationDegree"
+                        onChange={this.handleChange}
+                        type="input"
+                        placeholder="Enter Degree"
+                      />
                     </Form.Group>
                   </Form.Row>
 
                   <Form.Row>
                     <Form.Group className="m-2" as={Col}>
                       <Form.Label>Description</Form.Label>
-                      <FormControl as="textarea" aria-label="With textarea" />
+                      <FormControl
+                        id=" educationDescription"
+                        onChange={this.handleChange}
+                        as="textarea"
+                        aria-label="With textarea"
+                      />
                     </Form.Group>
                   </Form.Row>
 
-                  <div>
-                    <label className="startLabel">Start :</label>
-                    <DatePicker
-                      className="form-control m-3"
-                      selected={this.state.checkInDate}
-                      minDate={new Date()}
-                      onChange={this.handleCheckInDate}
-                    />
-                  </div>
-                  <div>
-                    <label className="toLabel">To :</label>
-                    <DatePicker
-                      className="form-control ml-3"
-                      selected={this.state.checkOutDate}
-                      minDate={this.state.checkInDate}
-                      onChange={this.handleCheckOutDate}
-                    />
-                  </div>
+                  <Form.Row>
+                    <Form.Group className="m-2" as={Col}>
+                      <Form.Label> Start</Form.Label>
+                      <Form.Control
+                        id=" educationStart"
+                        onChange={this.handleChange}
+                        type="date"
+                        placeholder="DD-MM-YYYY"
+                      />
+                    </Form.Group>
+
+                    <Form.Group className="m-2" as={Col} controlId="end-name">
+                      <Form.Label>To</Form.Label>
+                      <Form.Control
+                        id=" educationTo"
+                        onChange={this.handleChange}
+                        type="date"
+                        placeholder="DD-MM-YYYY"
+                      />
+                    </Form.Group>
+                  </Form.Row>
                   <Button
                     className="sm ml-3 mb-3"
                     variant="primary"
@@ -312,8 +374,7 @@ class Builder extends Component {
               </div>
               <div className="form_experience">
                 <div className="header_form_experience">
-                  <h3 className="ml-3">header</h3>
-                  <hr />
+                  <h3 className="ml-3"></h3>
                 </div>
                 <Form>
                   <Form.Row>
@@ -338,12 +399,12 @@ class Builder extends Component {
                   <Form.Row>
                     <Form.Group className="m-2" as={Col} controlId="first-name">
                       <Form.Label> Start</Form.Label>
-                      <Form.Control type="input" placeholder="DD-MM-YYYY" />
+                      <Form.Control type="date" placeholder="DD-MM-YYYY" />
                     </Form.Group>
 
                     <Form.Group className="m-2" as={Col} controlId="end-name">
                       <Form.Label>To</Form.Label>
-                      <Form.Control type="input" placeholder="DD-MM-YYYY" />
+                      <Form.Control type="date" placeholder="DD-MM-YYYY" />
                     </Form.Group>
                   </Form.Row>
                   <Button
@@ -376,325 +437,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Builder);
-
-// function Builder() {
-//   // define check-in and check-out state
-//   const [checkInDate, setCheckInDate] = useState(null);
-//   const [checkOutDate, setCheckOutDate] = useState(null);
-
-//   // define handler change function on check-in date
-//   const handleCheckInDate = (date) => {
-//     setCheckInDate(date);
-//     setCheckOutDate(null);
-//   };
-
-//   // define handler change function on check-out date
-//   const handleCheckOutDate = (date) => {
-//     setCheckOutDate(date);
-//   };
-
-//   return (
-//     <div className="resume">
-//       <div className="section1 ">
-//         <div className="headerSection1">
-//           <h3>Tittle</h3>
-//         </div>
-
-//         {/* //PROFILEEE  SECTIIONNNNNN */}
-
-//         <Form.Row>
-//           <div className="personalDetails">
-//             <h3>
-//               <input type="text" placeholder="Personal Details" />{" "}
-//               <i className="far fa-edit"></i>
-//             </h3>
-//           </div>
-//         </Form.Row>
-//         <Form>
-//           <Form.Row>
-//             <Form.Group as={Col} controlId="first-name">
-//               <Form.Label> First Name</Form.Label>
-//               <Form.Control type="input" placeholder="Enter First Name" />
-//             </Form.Group>
-
-//             <Form.Group as={Col} controlId="end-name">
-//               <Form.Label>End Name</Form.Label>
-//               <Form.Control type="input" placeholder="Enter End Name" />
-//             </Form.Group>
-//           </Form.Row>
-
-//           <Form.Row>
-//             <Form.Group as={Col} controlId="first-name">
-//               <Form.Label> Email</Form.Label>
-//               <Form.Control type="email" placeholder="Enter Email" />
-//             </Form.Group>
-
-//             <Form.Group as={Col} controlId="end-name">
-//               <Form.Label>Phone</Form.Label>
-//               <Form.Control type="input" placeholder="Enter Phone Number" />
-//             </Form.Group>
-//           </Form.Row>
-
-//           <Form.Group controlId="formGridAddress1">
-//             <Form.Label>Address</Form.Label>
-//             <Form.Control placeholder="1234 Main St" />
-//           </Form.Group>
-
-//           <Form.Group controlId="formGridAddress2">
-//             <Form.Label>Address 2</Form.Label>
-//             <Form.Control placeholder="Apartment, studio, or floor" />
-//           </Form.Group>
-
-//           <Form.Row>
-//             <Form.Group as={Col} controlId="formGridCity">
-//               <Form.Label>City</Form.Label>
-//               <Form.Control />
-//             </Form.Group>
-
-//             <Form.Group as={Col} controlId="formGridState">
-//               <Form.Label>State</Form.Label>
-//               <Form.Control as="select" defaultValue="Choose...">
-//                 <option>Choose...</option>
-//                 <option>Indonesia</option>
-//                 <option>Malaysia</option>
-//               </Form.Control>
-//             </Form.Group>
-
-//             <Form.Group as={Col} controlId="formGridZip">
-//               <Form.Label>Zip Code</Form.Label>
-//               <Form.Control />
-//             </Form.Group>
-//           </Form.Row>
-
-//           {/* PROFFESIONAL SUMMARY */}
-
-//           <Form.Row>
-//             <div className="proSummary">
-//               <h3>
-//                 <input type="text" placeholder="Proffesional Summary" />{" "}
-//                 <i className="far fa-edit"></i>
-//               </h3>
-//             </div>
-//           </Form.Row>
-//           <Form.Row>
-//             <Form.Group as={Col}>
-//               <FormControl
-//                 as="textarea"
-//                 aria-label="With textarea"
-//                 placeholder="Hardworking College Student seeking employment.• Bringing forth a motivated attitude and a variety of powerful skills.•"
-//               />
-//             </Form.Group>
-//           </Form.Row>
-
-//           {/* SOCIAL LINNKS */}
-//           <Form.Row>
-//             <div className="socialLinks">
-//               <h3>
-//                 <input type="text" placeholder="Websites and Social Links" />{" "}
-//                 <i className="far fa-edit"></i>
-//               </h3>
-//             </div>
-//           </Form.Row>
-
-//           <Form.Row>
-//             <Form.Group as={Col} controlId="formGridCity">
-//               <Form.Label>Link 1</Form.Label>
-//               <Form.Control />
-//             </Form.Group>
-
-//             <Form.Group as={Col} controlId="formGridZip">
-//               <Form.Label>Link 2</Form.Label>
-//               <Form.Control />
-//             </Form.Group>
-//           </Form.Row>
-
-//           {/* SKILLS */}
-
-//           <div className="skills">
-//             <Form.Row>
-//               <div className="skills_tittle">
-//                 <div className="header_skill">
-//                   <h3>
-//                     <input type="text" placeholder="Skills" />{" "}
-//                   </h3>
-//                 </div>
-//                 <div className="icons">
-//                   <h3>
-//                     <i className="far fa-edit"></i>
-//                   </h3>
-//                 </div>
-//               </div>
-//             </Form.Row>
-//             <div className="skills_left">
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="HTML5" />
-//               </Form.Group>
-
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="CSS3" />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="GIT" />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="REDUX" />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check
-//                   className="m-20"
-//                   type="checkbox"
-//                   label="Javascript"
-//                 />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="GIT" />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check className="m-20" type="checkbox" label="REDUX" />
-//               </Form.Group>
-//               <Form.Group id="formGridCheckbox">
-//                 <Form.Check
-//                   className="m-20"
-//                   type="checkbox"
-//                   label="Javascript"
-//                 />
-//               </Form.Group>
-//             </div>
-//           </div>
-
-//           <div className="addSkills">
-//             <Form.Group>
-//               <Form.Label>Add Others Skills</Form.Label>
-
-//               <Form.Control placeholder="Add Other Skills" />
-//               <Button className="mt-3" variant="primary" type="submit">
-//                 Add Skills
-//               </Button>
-//             </Form.Group>
-//           </div>
-
-//           {/* EDUCATIONS */}
-//           <div className="educations">
-//             <div className="header_educations">
-//               <h3>
-//                 <input type="text" placeholder="Education" />{" "}
-//                 <i className="far fa-edit"></i>
-//               </h3>
-//             </div>
-//             <div className="form_educations">
-//               <div className="header_form_education">
-//                 <h3 className="ml-3">header</h3>
-//                 <hr />
-//               </div>
-//               <Form>
-//                 <Form.Row>
-//                   <Form.Group className="m-2" as={Col} controlId="first-name">
-//                     <Form.Label> School or University</Form.Label>
-//                     <Form.Control
-//                       type="input"
-//                       placeholder="Enter School/University"
-//                     />
-//                   </Form.Group>
-
-//                   <Form.Group className="m-2" as={Col} controlId="end-name">
-//                     <Form.Label>Degree</Form.Label>
-//                     <Form.Control type="input" placeholder="Enter Degree" />
-//                   </Form.Group>
-//                 </Form.Row>
-
-//                 <Form.Row>
-//                   <Form.Group className="m-2" as={Col}>
-//                     <Form.Label>Description</Form.Label>
-//                     <FormControl as="textarea" aria-label="With textarea" />
-//                   </Form.Group>
-//                 </Form.Row>
-
-//                 <div>
-//                   <label className="startLabel">Start :</label>
-//                   <DatePicker
-//                     className="form-control m-3"
-//                     selected={checkInDate}
-//                     minDate={new Date()}
-//                     onChange={handleCheckInDate}
-//                   />
-//                 </div>
-//                 <div>
-//                   <label className="toLabel">To :</label>
-//                   <DatePicker
-//                     className="form-control ml-3"
-//                     selected={checkOutDate}
-//                     minDate={checkInDate}
-//                     onChange={handleCheckOutDate}
-//                   />
-//                 </div>
-//                 <Button
-//                   className="sm ml-3 mb-3"
-//                   variant="primary"
-//                   type="submit"
-//                 >
-//                   Add New
-//                 </Button>
-//               </Form>
-//             </div>
-//           </div>
-
-//           <div className="experience">
-//             <div className="header_experience">
-//               <h3>
-//                 <input type="text" placeholder="Experience" />{" "}
-//                 <i className="far fa-edit"></i>
-//               </h3>
-//             </div>
-//             <div className="form_experience">
-//               <div className="header_form_experience">
-//                 <h3 className="ml-3">header</h3>
-//                 <hr />
-//               </div>
-//               <Form>
-//                 <Form.Row>
-//                   <Form.Group className="m-2" as={Col} controlId="first-name">
-//                     <Form.Label> Company</Form.Label>
-//                     <Form.Control type="input" placeholder="Enter Company" />
-//                   </Form.Group>
-
-//                   <Form.Group className="m-2" as={Col} controlId="end-name">
-//                     <Form.Label>Position</Form.Label>
-//                     <Form.Control type="input" placeholder="Enter Position" />
-//                   </Form.Group>
-//                 </Form.Row>
-
-//                 <Form.Row>
-//                   <Form.Group className="m-2" as={Col}>
-//                     <Form.Label>Description</Form.Label>
-//                     <FormControl as="textarea" aria-label="With textarea" />
-//                   </Form.Group>
-//                 </Form.Row>
-
-//                 <Form.Row>
-//                   <Form.Group className="m-2" as={Col} controlId="first-name">
-//                     <Form.Label> Start</Form.Label>
-//                     <Form.Control type="input" placeholder="DD-MM-YYYY" />
-//                   </Form.Group>
-
-//                   <Form.Group className="m-2" as={Col} controlId="end-name">
-//                     <Form.Label>To</Form.Label>
-//                     <Form.Control type="input" placeholder="DD-MM-YYYY" />
-//                   </Form.Group>
-//                 </Form.Row>
-//                 <Button
-//                   className="sm ml-3 mb-3"
-//                   variant="primary"
-//                   type="submit"
-//                 >
-//                   Add New
-//                 </Button>
-//               </Form>
-//             </div>
-//           </div>
-//         </Form>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Builder;

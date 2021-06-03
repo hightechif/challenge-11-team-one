@@ -11,10 +11,10 @@ export default class Resume extends Component {
       <div className="resume">
         <Container fluid>
           <Row>
-            <Col md={3}>
+            <Col md={6}>
               <Builder />
             </Col>
-            <Col md={9}>
+            <Col md={6}>
               <Preview />
             </Col>
           </Row>
