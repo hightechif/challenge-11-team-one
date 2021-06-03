@@ -1,24 +1,48 @@
 import React, { Component } from 'react'
-import { faFacebook, faTwitter, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faTwitter, faGithub, faGoogle, faRProject } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Redirect } from 'react-router'
+import { login } from '../../redux/actions/auth.actions'
+import { connect } from 'react-redux'
 
 
-export default class signIn extends Component {
+class signIn extends Component {
+    state = {
+        email: '',
+        password: ''
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        // dispatch login, ex:
+        // this.props.login(this.state);
+    }
     render() {
+        const { authError, auth } = this.props;
+
+        // if user is logged in, redirect to home
+        if (auth.uid) return <Redirect to='/' /> 
+
         return (
             <div className="py-5">
                 <div id="login-row" className="row justify-content-center no-gutters">
                     <div id="login-column" className="col-md-4">  
                         <div id="login-box" className="col-md-12">
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <h1 className="mb-3">Sign In</h1>
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example1">Email address</label>
-                                    <input type="email" id="form2Example1" class="form-control" />
+                                    <label class="form-label" for="email">Email address</label>
+                                    <input type="email" id="email" class="form-control"  onChange={this.handleChange}/>
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example2">Password</label>
-                                    <input type="password" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="password">Password</label>
+                                    <input type="password" id="password" class="form-control" onChange={this.handleChange}/>
                                 </div>
                                 <div class="row mb-4">
                                     <div class="col">
@@ -55,3 +79,19 @@ export default class signIn extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError,
+        // if using firebase :
+        // auth: state.firebase.auth
+        // auth dummy:
+        auth: 'hallo'
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        login: (creds) => dispatch(login(creds))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(signIn)
