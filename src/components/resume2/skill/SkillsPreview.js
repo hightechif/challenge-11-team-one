@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-export default class SkillsPreview extends Component {
+class SkillsPreview extends Component {
   render() {
     return (
       <div>
@@ -13,3 +14,11 @@ export default class SkillsPreview extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    skill: state.skill,
+  };
+};
+
+export default connect(mapStateToProps)(SkillsPreview);
