@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import VideoSection from './video'
+import { Link } from 'react-router-dom';
 
 
 export default class homepage extends Component {
@@ -12,7 +13,7 @@ export default class homepage extends Component {
                         <div class="col-lg-8 text-center mx-auto py-3">
                             <h2 class="py-3">Make a resume has never been this easy</h2>
                             <VideoSection />
-                            <a href="/resume" class="btn btn-primary my-4 py-2">Build Your Resume</a>
+                            <Link to="/resume2" class="btn btn-primary my-4 py-2">Build Your Resume</Link>
                         </div>
                     </div>
                 </section>

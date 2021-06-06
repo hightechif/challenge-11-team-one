@@ -35,7 +35,7 @@ class signIn extends Component {
                     <div id="login-column" className="col-md-4">  
                         <div id="login-box" className="col-md-12">
                             <form onSubmit={this.handleSubmit}>
-                                <h1 className="mb-3">Sign In</h1>
+                                <h1 className="mb-3">Log In</h1>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="email">Email address</label>
                                     <input type="email" id="email" class="form-control"  onChange={this.handleChange}/>
@@ -52,7 +52,7 @@ class signIn extends Component {
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign in</button>
 
-                                <div class="text-center">
+                                {/* <div class="text-center">
                                     <p>Not a member? <a href="/register">Register</a></p>
                                     <p>or sign up with:</p>
                                     <button type="button" class="btn btn-primary btn-floating mx-1">
@@ -70,7 +70,7 @@ class signIn extends Component {
                                     <button type="button" class="btn btn-primary btn-floating mx-1">
                                     <FontAwesomeIcon icon={faGithub} />
                                     </button>
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                     </div>
