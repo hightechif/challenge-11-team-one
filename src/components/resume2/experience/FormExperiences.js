@@ -66,7 +66,7 @@ class FormExperiences extends Component {
     return (
       <div>
         <Container fluid className={classes.formexperience}>
-          <h3 className={"mt-4"}>Experiences</h3>
+          <h3 className="my-4">Latest Experience</h3>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Row>
@@ -76,6 +76,7 @@ class FormExperiences extends Component {
                     id="company"
                     onChange={this.handleChange}
                     value={this.state.company}
+                    placeholder="Enter Company"
                   />
                 </Form.Group>
 
@@ -85,6 +86,7 @@ class FormExperiences extends Component {
                     id="position"
                     onChange={this.handleChange}
                     value={this.state.position}
+                    placeholder="Enter Position"
                   />
                 </Form.Group>
               </Form.Row>
@@ -95,6 +97,7 @@ class FormExperiences extends Component {
                   id="description"
                   onChange={this.handleChange}
                   value={this.state.description}
+                  placeholder="Enter Description"
                 />
               </Form.Group>
               <Form.Row>
@@ -118,8 +121,8 @@ class FormExperiences extends Component {
                   />
                 </Form.Group>
               </Form.Row>
-              <Button variant="primary" type="submit" className={"mt-4"}>
-                Add
+              <Button variant="primary" type="submit" className={"mt-2"}>
+                Save Data
               </Button>
             </Form.Group>
           </Form>

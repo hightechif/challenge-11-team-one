@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5F5F5",
     height: "100%",
     width: "60%",
+    padding: 10,
   },
 
   kiri: {
@@ -38,32 +39,34 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "",
     // padding: 30,
-    height: "100%",
-    width: "50%",
+    // height: "100%",
+    width: "40%",
+    marginTop: 40
   },
   kanan: {
     margin: 20,
     padding: 20,
     flexGrow: 1,
+    marginTop: 40
   },
 
   // ITEMS
   name: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "extrabold",
     fontFamily: "Times-Roman",
     marginTop: 40,
     lineHeight: 1,
   },
   nameLast: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "extrabold",
     fontFamily: "Times-Roman",
     lineHeight: 1,
   },
 
   Details: {
-    fontSize: 12,
+    fontSize: 18,
     fontWeight: "extrabold",
     fontFamily: "Oswald",
     lineHeight: 1,
@@ -72,10 +75,11 @@ const styles = StyleSheet.create({
   },
 
   IsiDetails: {
-    fontSize: 7,
-    fontWeight: "extrabold",
+    fontSize: 12,
+    fontWeight: "bold",
     fontFamily: "Oswald",
-    lineHeight: 1,
+    // lineHeight: 1,
+    width: 280,
     marginTop: 10,
     left: 5,
   },
@@ -108,6 +112,8 @@ const styles = StyleSheet.create({
 //     </Page>
 //   </Document>
 // );
+
+
 
 const pdfViewer = (props) => (
   <div>
@@ -208,6 +214,7 @@ const pdfViewer = (props) => (
 
               <View style={styles.pageKanan}>
                 <Text style={styles.Details}>Profesional Summary</Text>
+
                 <Text style={styles.IsiDetails}>{props.data.profSummary}</Text>
                 <Text style={styles.Details}>Educations</Text>
                 <Text style={styles.IsiDetails}>
@@ -215,6 +222,20 @@ const pdfViewer = (props) => (
                 </Text>
                 <Text style={styles.IsiDetails}>{props.education.school}</Text>
                 <Text style={styles.IsiDetails}>{props.education.degree}</Text>
+                <Text style={styles.Details}>Experiences</Text>
+                <Text style={styles.IsiDetails}>
+                  {props.experience.from} - {props.experience.to}
+                </Text>
+                <Text style={styles.IsiDetails}>
+                  {props.experience.position}
+                </Text>
+                <Text style={styles.IsiDetails}>
+                  {props.experience.company}
+                </Text>
+
+                <Text style={styles.IsiDetails}>
+                  {props.experience.description}
+                </Text>
               </View>
             </Page>
           </Document>

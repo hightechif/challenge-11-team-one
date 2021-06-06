@@ -1,9 +1,9 @@
 const initState = {
-  company: "companyName",
-  position: "position",
-  description: "description",
-  from: "from",
-  to: "to",
+  company: "",
+  position: "",
+  description: "",
+  from: "",
+  to: "",
 };
 
 const experienceReducer = (state = initState, action) => {

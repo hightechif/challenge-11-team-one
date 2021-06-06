@@ -1,8 +1,8 @@
-.resume2 {
+/* .resume2 {
   display: flex;
-}
+} */
 .atas {
-  height: 100vh;
+  height: 90vh;
   width: 95%;
 }
 
@@ -13,14 +13,23 @@
 }
 
 .spacePreview {
-  /* background-color: #343a40; */
+  background-color: #fff;
+  position: fixed;
+  top: 9;
+  right: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .skills_left {
     display: grid;
   }
   .buttonDL {
     margin-bottom: 20px;
+  }
+  .spacePreview {
+    background-color: #fff;
+    position: relative;
+    /* top: 9;
+    right: 0; */
   }
 }

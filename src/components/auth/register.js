@@ -63,6 +63,9 @@ class Register extends Component {
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
+                                <div class="text-center">
+                                    <p>or login <a href="/login">here</a></p>
+                                </div>
 
                                 {/* <div class="text-center">
                                     <p>or sign in with:</p>

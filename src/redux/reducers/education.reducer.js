@@ -1,8 +1,8 @@
 const initState = {
-  school: "schoolName",
-  degree: "degree",
-  from: "from",
-  to: "to",
+  school: "",
+  degree: "",
+  from: "",
+  to: "",
 };
 
 const educationReducer = (state = initState, action) => {

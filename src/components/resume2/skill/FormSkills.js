@@ -45,7 +45,7 @@ class FormSkills extends Component {
     return (
       <div>
         <Container fluid className={classes.formskill}>
-          <h3 className={"mt-4"}>Skills</h3>
+          <h3 className="my-4">Skills</h3>
 
           <Form onSubmit={this.handleSubmit}>
             <Form.Group>
@@ -54,7 +54,7 @@ class FormSkills extends Component {
                 onChange={this.handleChange}
                 id="skill"
               />
-              <Button variant="primary" type="submit" className={"mt-4"}>
+              <Button variant="primary" type="submit" className={"mt-2"}>
                 Add
               </Button>
             </Form.Group>

@@ -83,7 +83,7 @@ class Builder extends Component {
               <div className="col-md-10 mx-auto">
                 <form onSubmit={this.handleSubmit}>
                   <div className="personal-details">
-                    <h3>Personal Details</h3>
+                    <h3 className="mb-3">Personal Details</h3>
                     <Form.Row>
                       <Form.Group as={Col}>
                         <Form.Label> First Name</Form.Label>
@@ -183,16 +183,16 @@ class Builder extends Component {
                       </Form.Group>
                     </Form.Row>
 
-                    {/* PROFFESIONAL SUMMARY */}
+                    <button type="submit" class="btn btn-primary mt-2">
+                      Save Data
+                    </button>
+
+
+                    {/* PROFESIONAL SUMMARY */}
 
                     <Form.Row>
                       <div className="proSummary">
-                        <h3>
-                          <input
-                            type="text"
-                            placeholder="Proffesional Summary"
-                          />
-                        </h3>
+                        <h3 className="my-3">Profesional Summary</h3>
                       </div>
                     </Form.Row>
                     <Form.Row>
@@ -207,15 +207,14 @@ class Builder extends Component {
                       </Form.Group>
                     </Form.Row>
 
+                    <button type="submit" class="btn btn-primary mt-2">
+                      Save Data
+                    </button>
+
                     {/* SOCIAL LINNKS */}
                     <Form.Row>
                       <div className="socialLinks">
-                        <h3>
-                          <input
-                            type="text"
-                            placeholder="Websites and Social Links"
-                          />
-                        </h3>
+                        <h3 className="my-4">Websites and Social Links</h3>
                       </div>
                     </Form.Row>
 
@@ -238,7 +237,7 @@ class Builder extends Component {
                       </Form.Group>
                     </Form.Row>
 
-                    <button type="submit" class="btn btn-primary mt-4">
+                    <button type="submit" class="btn btn-primary mt-2">
                       Save Data
                     </button>
                   </div>
@@ -248,7 +247,7 @@ class Builder extends Component {
                 <FormExperiences />
               </div>
             </div>
-            <div className=" spacePreview  col-md-6 ">
+            <div className="spacePreview  col-md-6 ">
               <Preview />
             </div>
           </div>
