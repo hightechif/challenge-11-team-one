@@ -14,16 +14,22 @@ const authReducer = (state = initState, action) => {
             console.log(state)
             return {
                 ...state,
-                authError: null
+                authError: null,
+                user: action.payload.data
             }
         case 'LOGOUT_SUCCESS':
             console.log('signout success');
-            return state;
+            return {
+                ...state,
+                authError: null,
+                user: null
+            }
         case 'REGISTER_SUCCESS':
             console.log('REGISTER success');
             return {
                 ...state,
-                authError: null
+                authError: null,
+                user: action.payload.data
             }
         case 'REGISTER_ERROR':
             console.log('REGISTER error');

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { faFacebook, faTwitter, faGithub, faGoogle, faRProject } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router'
@@ -21,13 +22,13 @@ class signIn extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         // dispatch login, ex:
-        // this.props.login(this.state);
+        this.props.login(this.state);
     }
     render() {
-        const { authError, auth } = this.props;
+        const { authError, user } = this.props;
 
         // if user is logged in, redirect to home
-        if (auth.uid) return <Redirect to='/' /> 
+        if (user) return <Redirect to='/' /> 
 
         return (
             <div className="py-5">
@@ -52,7 +53,7 @@ class signIn extends Component {
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign in</button>
                                 <div class="text-center">
-                                    <p>Not a member? <a href="/register">Register</a></p>
+                                    <p>Not a member? <Link to="/register">Register</Link></p>
                                 </div>
 
                                 {/* <div class="text-center">
@@ -86,10 +87,7 @@ class signIn extends Component {
 const mapStateToProps = (state) => {
     return {
         authError: state.auth.authError,
-        // if using firebase :
-        // auth: state.firebase.auth
-        // auth dummy:
-        auth: 'hallo'
+        user: state.auth.user
     }
 }
 const mapDispatchToProps = (dispatch) => {
