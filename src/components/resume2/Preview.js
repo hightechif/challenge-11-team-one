@@ -33,13 +33,6 @@ const styles = StyleSheet.create({
 //   </Document>
 // );
 
-// email: "",
-// phone: "",
-// address: "",
-// address2: "",
-// city: "",
-// state: "",
-// zipCode: "",
 const pdfViewer = (props) => (
     <div style={{ height: '100%'}}>
     <BlobProvider document={

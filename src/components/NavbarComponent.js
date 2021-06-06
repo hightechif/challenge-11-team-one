@@ -2,39 +2,32 @@ import React, { Component } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import classes from "../style/Navbar.module.css";
 import { Link } from "react-router-dom";
+import SignedInLinks from '../components/auth/signedInLinks'
+import SignedOutLinks from '../components/auth/signedOutLinks'
+import { connect } from 'react-redux'
 
-export default class NavbarComponent extends Component {
-  render() {
-    return (
-      <Navbar expand="lg" bg="dark" className={classes.navbar} sticky="top">
-        <Navbar.Brand className={classes.navbarBrand}>
-          <Link to="/">
-            TEAM <strong>O.N.E</strong>
-          </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" justify-content-between>
-          <Nav className={`${classes.navLink} mr-auto`}>
-            <Nav.Link>
-              <Link to="/">Home</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/resume">Resume</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/resume2">Resume2</Link>
-            </Nav.Link>
-          </Nav>
-          <Nav className={`${classes.navLink} ml-auto`}>
-            <Nav.Link>
-              <Link to="/register">Register</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/login">Login</Link>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
+function NavbarComponent(props) {
+  const { authError, user } = props;
+
+  const links = user ? <SignedInLinks/> : <SignedOutLinks />;
+  return (
+    <Navbar expand="lg" bg="light" className={classes.navbar} sticky="top">
+      <Navbar.Brand className={classes.navbarBrand} as={Link} to="/">
+          TEAM <strong>O.N.E</strong>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      {/* { links } */}
+      <SignedOutLinks/>
+      
+    </Navbar>
+  );
+}
+
+const mapStateToProps = (state) => {
+  return {
+      // authError: state.auth.authError,
+      // user: state.auth.user
   }
 }
+
+export default connect(mapStateToProps)(NavbarComponent);

@@ -38,7 +38,7 @@ class Register extends Component {
                     <div id="login-column" className="col-md-4">  
                         <div id="login-box" className="col-md-12">
                             <form onSubmit={this.handleSubmit}>
-                                <h1 className="mb-3">Sign Up</h1>
+                                <h1 className="mb-3">Register</h1>
                                 <div class="row mb-4">
                                     <div class="col">
                                     <div class="form-outline">
@@ -64,7 +64,7 @@ class Register extends Component {
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
 
-                                <div class="text-center">
+                                {/* <div class="text-center">
                                     <p>or sign in with:</p>
                                     <button type="button" class="btn btn-primary btn-floating mx-1">
                                     <FontAwesomeIcon icon={faFacebook} />
@@ -81,7 +81,7 @@ class Register extends Component {
                                     <button type="button" class="btn btn-primary btn-floating mx-1">
                                     <FontAwesomeIcon icon={faGithub} />
                                     </button>
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                     </div>
