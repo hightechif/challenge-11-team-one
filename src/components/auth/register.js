@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router'
 import { register } from '../../redux/actions/auth.actions'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 class Register extends Component {
@@ -23,14 +24,15 @@ class Register extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         // dispatch register, ex:
-        // this.props.register(this.state);
+        console.log(this.state)
+        this.props.register(this.state);
     }
 
     render() {
-        const { auth, authError } = this.props;
+        const { user, authError } = this.props;
 
         // if user is logged in, redirect to home
-        if(auth.uid) return <Redirect to="/" />
+        if(user) return <Redirect to="/" />
 
         return (
             <div className="py-5">
@@ -64,7 +66,7 @@ class Register extends Component {
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
                                 <div class="text-center">
-                                    <p>or login <a href="/login">here</a></p>
+                                    <p>or login <Link to="/login">here</Link></p>
                                 </div>
 
                                 {/* <div class="text-center">
@@ -96,7 +98,7 @@ class Register extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        auth: 'hello',
+        user: state.auth.user,
         authError: state.auth.authError
     }
 }
