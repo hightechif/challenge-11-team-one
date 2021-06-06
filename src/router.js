@@ -6,7 +6,6 @@ import Register from "./pages/Register";
 import Notfound from "./pages/NotFound";
 import Resume from "./pages/Resume";
 import Resume2 from "./pages/Resume2";
-import FormSkills from "./components/resume2/skill/FormSkills";
 
 const Router = () => (
   <BrowserRouter>
@@ -16,7 +15,6 @@ const Router = () => (
       <Route exact path="/register" component={Register} />
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/resume2" component={Resume2} />
-      <Route exact path="/formskill" component={FormSkills} />
       <Route component={Notfound} />
     </Switch>
   </BrowserRouter>

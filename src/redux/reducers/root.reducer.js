@@ -1,10 +1,16 @@
 import dataReducer from "./data.reducer";
 import authReducer from "./auth.reducer";
+import skillReducer from "./skill.reducer";
+import educationReducer from "./education.reducer";
+import experienceReducer from "./experience.reducer";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
   data: dataReducer,
-  auth: authReducer
+  auth: authReducer,
+  skill: skillReducer,
+  education: educationReducer,
+  experience: experienceReducer,
 });
 
 export default rootReducer;

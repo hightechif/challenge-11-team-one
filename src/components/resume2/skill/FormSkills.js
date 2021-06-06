@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import SkillsPreview from "./SkillsPreview";
-import { Container, Row, Col } from "react-bootstrap";
+import classes from "../../../style/Form.module.css";
+import { Container, Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { saveSkill } from "../../../redux/actions/skill.actions";
-import NavbarComponent from "../../NavbarComponent";
 
 class FormSkills extends Component {
   constructor(props) {
@@ -45,20 +44,26 @@ class FormSkills extends Component {
   render() {
     return (
       <div>
-        <NavbarComponent />
-        <Container fluid>
-          <Row>
-            <Col md={6}>
-              <h1>Skills</h1>
-              <form onSubmit={this.handleSubmit}>
-                <input value={this.state.skill} onChange={this.handleChange} />
-                <button>Add</button>
-              </form>
-            </Col>
-            <Col md={6}>
-              <SkillsPreview skills={this.state.skills} />
-            </Col>
-          </Row>
+        <Container fluid className={classes.formskill}>
+          <h3 className={"mt-4"}>Skills</h3>
+
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group>
+              <Form.Control
+                value={this.state.skill}
+                onChange={this.handleChange}
+                id="skill"
+              />
+              <Button variant="primary" type="submit" className={"mt-4"}>
+                Add
+              </Button>
+            </Form.Group>
+          </Form>
+
+          {/* <form onSubmit={this.handleSubmit}>
+            <input value={this.state.skill} onChange={this.handleChange} />
+            <button>Add</button>
+          </form> */}
         </Container>
       </div>
     );

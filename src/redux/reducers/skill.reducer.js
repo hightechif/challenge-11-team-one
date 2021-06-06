@@ -1,5 +1,5 @@
 const initState = {
-  skills: ["javaScript"],
+  skills: [],
 };
 
 const skillReducer = (state = initState, action) => {
