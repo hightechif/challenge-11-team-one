@@ -229,7 +229,7 @@
 .addLinks > p {
   margin-top: 10px;
   font-size: 8px;
-  line-height: 0px;
+  line-height: 1px;
   font-weight: 800;
 }
 
@@ -294,3 +294,9 @@ BAGIAN KANAN PREVIEW */
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* @media screen and (max-width: 600px) {
+  .skills_left {
+    display: grid;
+  }
+} */

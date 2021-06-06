@@ -15,10 +15,7 @@ function NavbarComponent(props) {
       <Navbar.Brand className={classes.navbarBrand} as={Link} to="/">
           TEAM <strong>O.N.E</strong>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      {/* { links } */}
-      <SignedOutLinks/>
-      
+      { links }
     </Navbar>
   );
 }

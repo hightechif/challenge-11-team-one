@@ -51,6 +51,9 @@ class signIn extends Component {
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign in</button>
+                                <div class="text-center">
+                                    <p>Not a member? <a href="/register">Register</a></p>
+                                </div>
 
                                 {/* <div class="text-center">
                                     <p>Not a member? <a href="/register">Register</a></p>
