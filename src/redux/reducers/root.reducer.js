@@ -1,5 +1,6 @@
 import dataReducer from "./data.reducer";
 import authReducer from "./auth.reducer";
+import profpicReducer from "./profpic.reducer";
 import skillReducer from "./skill.reducer";
 import educationReducer from "./education.reducer";
 import experienceReducer from "./experience.reducer";
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   skill: skillReducer,
   education: educationReducer,
   experience: experienceReducer,
+  profpic: profpicReducer
 });
 
 export default rootReducer;

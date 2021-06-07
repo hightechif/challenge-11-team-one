@@ -9,6 +9,8 @@ import Preview from "../resume2/Preview";
 import FormSkills from "../resume2/skill/FormSkills";
 import FormEducations from "./education/FormEducations";
 import FormExperiences from "./experience/FormExperiences";
+// import Profpic from './ProfPic'
+import { Redirect } from 'react-router'
 
 class Builder extends Component {
   state = {
@@ -25,6 +27,7 @@ class Builder extends Component {
     webLinks: "",
     checkInDate: "",
     checkOutDate: "",
+    profpic: ""
   };
 
   componentDidMount() {
@@ -43,6 +46,7 @@ class Builder extends Component {
         profSummary: this.props.data.profSummary,
         webLinks: this.props.data.webLinks,
         webLinks2: this.props.data.webLinks2,
+        profpic: this.props.data.profpic
       };
     });
   }
@@ -65,7 +69,7 @@ class Builder extends Component {
     this.setState({
       [e.target.id]: e.target.value,
     });
-    console.log(this.state);
+    // console.log(this.state);
     this.props.saveData(this.state);
   };
 
@@ -75,6 +79,9 @@ class Builder extends Component {
   };
 
   render() {
+    const { user } = this.props
+    if (!user) return <Redirect to='/login' /> 
+
     return (
       <div>
         <div className="container-fluid">
@@ -84,7 +91,8 @@ class Builder extends Component {
                 <form onSubmit={this.handleSubmit}>
                   <div className="personal-details">
                     <h3 className="mb-3">Personal Details</h3>
-                    <Form.Row>
+                    {/* <Profpic /> */}
+                    <Form.Row className="mt-4">
                       <Form.Group as={Col}>
                         <Form.Label> First Name</Form.Label>
                         <Form.Control
@@ -258,8 +266,10 @@ class Builder extends Component {
 }
 
 const mapStateToProps = (state) => {
+  // console.log(state)
   return {
     data: state.data,
+    user: state.auth.user
   };
 };
 

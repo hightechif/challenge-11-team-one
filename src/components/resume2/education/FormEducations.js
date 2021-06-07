@@ -26,7 +26,7 @@ class FormEducations extends Component {
         to: this.props.education.to,
       };
     });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleSubmit = (e) => {
@@ -46,7 +46,7 @@ class FormEducations extends Component {
       from: "",
       to: "",
     });
-    console.log(this.state.educations);
+    // console.log(this.state.educations);
     this.props.saveEducation(this.state);
   };
 

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { faFacebook, faTwitter, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router'
 import { register } from '../../redux/actions/auth.actions'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Alert } from 'react-bootstrap'
 
 
 class Register extends Component {
@@ -24,15 +22,19 @@ class Register extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         // dispatch register, ex:
-        console.log(this.state)
+        // console.log(this.state)
         this.props.register(this.state);
     }
 
     render() {
-        const { user, authError } = this.props;
+        const { authError } = this.props;
+
+        const userLocalStg = JSON.parse(localStorage.getItem('user'));
+
+        // console.log(user)
 
         // if user is logged in, redirect to home
-        if(user) return <Redirect to="/" />
+        if (userLocalStg) return <Redirect to='/' />
 
         return (
             <div className="py-5">
@@ -65,8 +67,10 @@ class Register extends Component {
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
+                                { authError ? <Alert variant='danger' className="text-center">{authError}</Alert> : null}
+                                
                                 <div class="text-center">
-                                    <p>or login <Link to="/login">here</Link></p>
+                                    <p>or login <a href="/login">here</a></p>
                                 </div>
 
                                 {/* <div class="text-center">
