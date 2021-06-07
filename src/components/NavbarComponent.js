@@ -15,7 +15,7 @@ function NavbarComponent(props) {
   return (
     <Navbar expand="lg" bg="light" className={classes.navbar} sticky="top">
       <Navbar.Brand className={classes.navbarBrand} as={Link} to="/">
-          TEAM <strong>O.N.E</strong>
+          CV<strong>Generator</strong>
       </Navbar.Brand>
       { links }
     </Navbar>

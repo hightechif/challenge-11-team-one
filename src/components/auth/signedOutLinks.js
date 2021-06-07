@@ -8,9 +8,9 @@ function SignedOutLinks(){
       <>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" justify-content-between>
-          <Nav className={`${classes.navLink} mr-auto`}>
+          {/* <Nav className={`${classes.navLink} mr-auto`}>
             <Nav.Link as={Link} to='/'>Home</Nav.Link>
-          </Nav>
+          </Nav> */}
           <Nav className={`${classes.navLink} ml-auto`}>
             <Nav.Link as={Link} to='/login'>Register/Login</Nav.Link>
           </Nav>

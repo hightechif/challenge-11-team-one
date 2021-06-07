@@ -47,13 +47,13 @@ class signIn extends Component {
                                     <label class="form-label" for="password">Password</label>
                                     <input type="password" id="password" class="form-control" onChange={this.handleChange}/>
                                 </div>
-                                <div class="row mb-4">
+                                {/* <div class="row mb-4">
                                     <div class="col">
                                         <a href="#!">Forgot password?</a>
                                     </div>
-                                </div>
+                                </div> */}
 
-                                <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign in</button>
+                                <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Log in</button>
                                 { authError ? <Alert variant='danger' className="text-center">{authError}</Alert> : null}
                                 <div class="text-center">
                                     <p>Not a member? <a href="/register">Register</a></p>

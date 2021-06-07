@@ -66,11 +66,11 @@ class Register extends Component {
                                     <input type="password" id="password" class="form-control" onChange={this.handleChange} />
                                 </div>
 
-                                <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign up</button>
+                                <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Register</button>
                                 { authError ? <Alert variant='danger' className="text-center">{authError}</Alert> : null}
                                 
                                 <div class="text-center">
-                                    <p>or login <a href="/login">here</a></p>
+                                    <p>Already a member? <a href="/login">Login</a></p>
                                 </div>
 
                                 {/* <div class="text-center">
