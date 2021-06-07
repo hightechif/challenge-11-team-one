@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import NavbarComponent from "../components/NavbarComponent";
 import FooterComponent from "../components/FooterComponent";
-import Login from '../components/auth/login'
+import Uploader from '../components/resume2/ProfPic'
 
-export default class signIn extends Component {
+export default class uploader extends Component {
   render() {
     return (
       <div>
         <NavbarComponent />
-        <Login />
+        <Uploader />
         <FooterComponent />
       </div>
     );
