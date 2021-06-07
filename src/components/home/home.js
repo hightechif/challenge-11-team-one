@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import VideoSection from './video'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 
-export default class homepage extends Component {
+class homepage extends Component {
     render() {
+        // const { authError, user } = this.props;
+        
         return (
             <Container fluid>
                 <section id="tutorial" class="tutorial">
@@ -101,3 +104,13 @@ export default class homepage extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    // console.log(state.auth)
+    return {
+        authError: state.auth.authError,
+        user: state.auth
+    }
+}
+
+export default connect(mapStateToProps)(homepage)

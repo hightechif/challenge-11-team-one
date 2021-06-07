@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Notfound from "./pages/NotFound";
-import Resume from "./pages/Resume";
 import Resume2 from "./pages/Resume2";
 
 const Router = () => (
@@ -13,7 +12,6 @@ const Router = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
-      <Route exact path="/resume" component={Resume} />
       <Route exact path="/resume2" component={Resume2} />
       <Route component={Notfound} />
     </Switch>

@@ -10,6 +10,7 @@ const initState = {
   zipCode: "",
   profSummary: "",
   webLinks: "",
+  profpic: ""
 };
 
 const dataReducer = (state = initState, action) => {
@@ -29,6 +30,7 @@ const dataReducer = (state = initState, action) => {
         profSummary: action.payload.profSummary,
         webLinks: action.payload.webLinks,
         webLinks2: action.payload.webLinks2,
+        profpic: action.payload.profpic,
       };
       return newData;
     default:

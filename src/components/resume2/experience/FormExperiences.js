@@ -28,7 +28,7 @@ class FormExperiences extends Component {
         to: this.props.experience.to,
       };
     });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleSubmit = (e) => {
@@ -50,7 +50,7 @@ class FormExperiences extends Component {
       from: "",
       to: "",
     });
-    console.log(this.state.experiences);
+    // console.log(this.state.experiences);
     this.props.saveExperience(this.state);
   };
 

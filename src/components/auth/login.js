@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { faFacebook, faTwitter, faGithub, faGoogle, faRProject } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Redirect } from 'react-router'
 import { login } from '../../redux/actions/auth.actions'
 import { connect } from 'react-redux'
+import { Alert } from 'react-bootstrap'
 
 
 class signIn extends Component {
@@ -25,10 +23,14 @@ class signIn extends Component {
         this.props.login(this.state);
     }
     render() {
-        const { authError, user } = this.props;
+        const { authError } = this.props;
+
+        const userLocalStg = JSON.parse(localStorage.getItem('user'));
+
+        // console.log(user)
 
         // if user is logged in, redirect to home
-        if (user) return <Redirect to='/' /> 
+        if (userLocalStg) return <Redirect to='/' /> 
 
         return (
             <div className="py-5">
@@ -52,8 +54,9 @@ class signIn extends Component {
                                 </div>
 
                                 <button type="submit" class="btn btn-primary btn-block w-100 mb-4">Sign in</button>
+                                { authError ? <Alert variant='danger' className="text-center">{authError}</Alert> : null}
                                 <div class="text-center">
-                                    <p>Not a member? <Link to="/register">Register</Link></p>
+                                    <p>Not a member? <a href="/register">Register</a></p>
                                 </div>
 
                                 {/* <div class="text-center">

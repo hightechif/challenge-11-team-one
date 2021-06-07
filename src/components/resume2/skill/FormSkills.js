@@ -20,7 +20,7 @@ class FormSkills extends Component {
         skills: this.props.skill.skills,
       };
     });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleSubmit = (e) => {
@@ -29,7 +29,7 @@ class FormSkills extends Component {
       skills: [...this.state.skills, this.state.skill],
       skill: "",
     });
-    console.log(this.state);
+    // console.log(this.state);
     this.props.saveSkill(this.state);
   };
 
@@ -37,7 +37,7 @@ class FormSkills extends Component {
     this.setState({
       skill: e.target.value,
     });
-    console.log(this.state);
+    // console.log(this.state);
     this.props.saveSkill(this.state);
   };
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import classes from "../../style/Navbar.module.css";
 import { Link } from "react-router-dom";
