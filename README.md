@@ -1,8 +1,11 @@
 ## Binar Challenge | FSW5 | Team O.N.E.
 Code Challenge 11 dari Binar Academy untuk kelas Fullstack Web Wave 5 Team O.N.E.
 
+Repository FE: [https://gitlab.com/ridhanf/challenge-11-team-one](https://gitlab.com/ridhanf/challenge-11-team-one)
+Repository BE: [https://gitlab.com/ridhanf/challenge-11-team-one-be](https://gitlab.com/ridhanf/challenge-11-team-one-be)
+
 ### Demo
-Link for demo: [https://fsw5-tim1-staging.herokuapp.com/](https://fsw5-tim1-staging.herokuapp.com/)
+Link for demo: [https://cv-programmer.herokuapp.com/](https://cv-programmer.herokuapp.com/)
 
 ### Description
 Resume Builder sederhana.
